@@ -1,0 +1,32 @@
+<%= form_with(model: raticle, local: true) do |form| %>
+  <% if raticle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(raticle.errors.count, "error") %> prohibited this raticle from being saved:</h2>
+
+      <ul>
+        <% raticle.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_area :text %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
