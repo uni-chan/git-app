@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @raticle.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @raticle.author %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @raticle.text %>
+</p>
+
+<%= link_to 'Edit', edit_raticle_path(@raticle) %> |
+<%= link_to 'Back', raticles_path %>

@@ -1,0 +1,2 @@
+class Raticle < ApplicationRecord
+end
